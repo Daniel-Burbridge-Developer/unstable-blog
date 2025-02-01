@@ -10,7 +10,7 @@ export default function Home() {
         <ul>
           <li>
             <Link
-              href='/blog/interactive-post'
+              href='/blog/sample-interactive'
               className='text-blue-500 visited:text-red-400 hover:underline'
             >
               Interactive Post
@@ -18,7 +18,7 @@ export default function Home() {
           </li>
           <li>
             <Link
-              href='/blog/static-post'
+              href='/blog/sample-static'
               className='text-blue-500 visited:text-red-400 hover:underline'
             >
               Static Post
