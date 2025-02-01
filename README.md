@@ -73,12 +73,12 @@ This project is a static blog built with Next.js. It leverages Markdown for cont
 
 - [x] Scaffold project using Create Next App.
 - [x] Set up Tailwind CSS.
-- [] Create the basic file structure:
+- [x] Create the basic file structure:
   - `posts/` for Markdown content.
-  - `pages/` for homepage and dynamic post routes.
-  - `lib/` (or `utils/`) for Markdown parsing utilities.
-  - `components/` for reusable UI components.
+  - `blog/[slug]` for homepage and dynamic post routes.
+  - `components/ui` for reusable UI components.
   - `styles/` for global and module-specific CSS.
+- [x] Moved mdx-components.tsx to root of project, fixing build and runtime errors
 
 ### Markdown Integration
 
