@@ -1,4 +1,4 @@
-# Next.js Markdown Blog with Search
+# Unstable-Blog
 
 A beginner-level blog built with Next.js, Markdown, and Tailwind CSS that serves as a platform to learn web development. This project uses Markdown files (with YAML frontmatter) as the source for blog posts, supports dynamic routing, and features a search bar to filter posts.
 
