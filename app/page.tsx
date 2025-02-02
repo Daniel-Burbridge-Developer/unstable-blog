@@ -24,6 +24,14 @@ export default function Home() {
               Static Post
             </Link>
           </li>
+                    <li>
+            <Link
+              href='/blog/unstable-blog-test'
+              className='text-blue-500 visited:text-red-400 hover:underline'
+            >
+              Unstable Bllog
+            </Link>
+          </li>
         </ul>
       </main>
     </div>
