@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 
 const withMDX = createMDX({
   options: {
-    // eslint-disable-next-line
+    // @ts-expect-error
     remarkPlugins: [["remark-gfm", { strict: true, throwOnError: true }]],
     rehypePlugins: [],
   },
