@@ -82,14 +82,12 @@ This project is a static blog built with Next.js. It leverages Markdown for cont
 
 ### Markdown Integration
 
-- [ ] Create sample Markdown posts with YAML frontmatter.
-- [ ] Parse Markdown files using `gray-matter` in `lib/posts.ts`.
-- [ ] Render Markdown using `react-markdown`.
+- [x] Render Markdown using `MDX`.
 
 ### Dynamic Routing
 
-- [ ] Create dynamic route for blog posts (`pages/blog/[slug].js`).
-- [ ] Implement `getStaticProps` and `getStaticPaths` to statically generate pages.
+- [x] Create dynamic route for blog posts (`pages/blog/[slug].js`).
+- [x] Implement `getStaticParams` to statically generate pages.
 
 ### Search Functionality
 

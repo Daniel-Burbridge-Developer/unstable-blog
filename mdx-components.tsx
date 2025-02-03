@@ -1,80 +1,75 @@
 import type { MDXComponents } from 'mdx/types';
 import Image, { ImageProps } from 'next/image';
+import React from 'react';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    // Heading level 1 – large, bold, with ample margin
-    h1: ({ children }) => (
-      <h1 className="text-4xl font-bold text-gray-800 my-8">
-        {children}
-      </h1>
+    // H1 – extra-large, bold, indigo headline with ample spacing
+    h1: (props) => (
+      <h1 className="mt-8 mb-4 text-5xl font-bold text-indigo-900" {...props} />
     ),
-    // Heading level 2 – slightly smaller and semibold
-    h2: ({ children }) => (
-      <h2 className="text-3xl font-semibold text-gray-700 my-6">
-        {children}
-      </h2>
+    // H2 – large, semibold, using a slightly lighter indigo tone
+    h2: (props) => (
+      <h2 className="mt-8 mb-4 text-4xl font-semibold text-indigo-800" {...props} />
     ),
-    // Heading level 3 – medium size and weight
-    h3: ({ children }) => (
-      <h3 className="text-2xl font-medium text-gray-700 my-4">
-        {children}
-      </h3>
+    // H3 – medium-large with medium weight and a soft indigo hue
+    h3: (props) => (
+      <h3 className="mt-6 mb-3 text-3xl font-medium text-indigo-700" {...props} />
     ),
-    // Paragraph – comfortable line-height and margin
-    p: ({ children }) => (
-      <p className="text-base leading-relaxed text-gray-600 my-4">
-        {children}
-      </p>
+    // Paragraph – standard text size, relaxed line-height and a neutral gray tone
+    p: (props) => (
+      <p className="mb-4 text-base leading-relaxed text-gray-700" {...props} />
     ),
-    // Link – blue with hover underline
-    a: ({ children, href }) => (
-      <a href={href} className="text-blue-500 hover:underline">
-        {children}
-      </a>
+    // Link – indigo text that deepens on hover with a smooth transition
+    a: (props) => (
+      <a className="text-indigo-500 hover:text-indigo-700 transition-colors duration-200" {...props} />
     ),
-    // Image – using Next.js Image with rounded corners and shadow,
-    // wrapped in a div to add vertical spacing
+    // Image – Next.js Image with full-width display, rounded corners, and a subtle shadow
     img: (props) => (
       <div className="my-6">
         <Image
           sizes="100vw"
-          className="rounded-lg shadow-md"
+          className="rounded-lg shadow-lg"
           style={{ width: '100%', height: 'auto' }}
           {...(props as ImageProps)}
         />
       </div>
     ),
-    // Unordered List – styled with disc bullets inside the container
-    ul: ({ children }) => (
-      <ul className="list-disc list-inside my-4">
-        {children}
-      </ul>
+    // Unordered list – disc bullets, inside indentation, with consistent spacing
+    ul: (props) => (
+      <ul className="list-disc list-inside my-4 space-y-1" {...props} />
     ),
-    // Ordered List – styled with decimal numbering
-    ol: ({ children }) => (
-      <ol className="list-decimal list-inside my-4">
-        {children}
-      </ol>
+    // Ordered list – decimal numbering inside with vertical spacing
+    ol: (props) => (
+      <ol className="list-decimal list-inside my-4 space-y-1" {...props} />
     ),
-    // Blockquote – with a left border, padding, and italic text
-    blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-700 my-4">
-        {children}
-      </blockquote>
+    // List item – with a small bottom margin for spacing
+    li: (props) => (
+      <li className="mb-1" {...props} />
     ),
-    // Inline Code – with a subtle background and rounded corners
-    code: ({ children }) => (
-      <code className="bg-gray-100 text-red-600 px-1 py-0.5 rounded text-sm">
-        {children}
-      </code>
+    // Blockquote – left border in indigo, padding, and italic text
+    blockquote: (props) => (
+      <blockquote className="border-l-4 border-indigo-500 pl-4 italic text-gray-700 my-6" {...props} />
     ),
-    // Preformatted Code Block – dark background with monospaced font,
-    // padding, and horizontal scrolling for overflow
-    pre: ({ children }) => (
-      <pre className="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto my-4">
-        {children}
-      </pre>
+    // Inline code – subtle background and indigo text with rounded corners
+    code: (props) => (
+      <code className="bg-gray-200 text-indigo-700 px-1 py-0.5 rounded text-sm" {...props} />
+    ),
+    // Preformatted code block – dark background with light text, padding, and horizontal scrolling
+    pre: (props) => (
+      <pre className="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto my-6" {...props} />
+    ),
+    // Table – add 'not-prose' to disable the default prose styles
+    table: (props) => (
+      <table className="not-prose min-w-full border-collapse border border-gray-200 my-6" {...props} />
+    ),
+    // Table Header – add 'not-prose' here as well
+    th: (props) => (
+      <th className="not-prose px-4 py-2 border border-gray-200 bg-gray-50 text-indigo-900" {...props} />
+    ),
+    // Table Data – add 'not-prose' to ensure custom styles are used
+    td: (props) => (
+      <td className="not-prose px-4 py-2 border border-gray-200 text-gray-700" {...props} />
     ),
     ...components,
   };

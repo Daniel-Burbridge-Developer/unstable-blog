@@ -8,28 +8,12 @@ export default function Home() {
           Unstable <span className='text-[hsl(280,100%,70%)]'>Blog</span>
         </h1>
         <ul>
-          <li>
-            <Link
-              href='/blog/sample-interactive'
-              className='text-blue-500 visited:text-red-400 hover:underline'
-            >
-              Interactive Post
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='/blog/sample-static'
-              className='text-blue-500 visited:text-red-400 hover:underline'
-            >
-              Static Post
-            </Link>
-          </li>
                     <li>
             <Link
               href='/blog/unstable-blog-test'
               className='text-blue-500 visited:text-red-400 hover:underline'
             >
-              Unstable Bllog
+              Unstable Blog
             </Link>
           </li>
         </ul>

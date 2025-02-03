@@ -10,11 +10,11 @@ export default async function Page({
   return (
   <article className="prose lg:prose-xl mx-auto p-4">
     <Post />
-    </article>)
+  </article>)
 }
  
 export function generateStaticParams() {
-  return [{ slug: 'sample-interactive' }, { slug: 'sample-static' }, { slug: 'unstable-blog-test' }]
+  return [{ slug: 'unstable-blog-test' }]
 }
  
 export const dynamicParams = false
