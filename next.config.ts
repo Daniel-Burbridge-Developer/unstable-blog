@@ -1,12 +1,17 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
 const withMDX = createMDX({
-  options: {},
+  options: {
+    // eslint-disable-next-line
+    remarkPlugins: [["remark-gfm", { strict: true, throwOnError: true }]],
+    rehypePlugins: [],
+  },
 });
 
 export default withMDX(nextConfig);

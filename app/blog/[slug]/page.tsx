@@ -8,7 +8,7 @@ export default async function Page({
 
  
   return (
-  <article className="prose lg:prose-xl mx-auto p-4">
+  <article>
     <Post />
   </article>)
 }

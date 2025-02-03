@@ -18,17 +18,23 @@ Choosing the right tool for handling Markdown content was another adventure in i
 
 ### 🔥 **Comparison: `next-mdx-remote` vs. `react-markdown`**
 
-| Feature                                 | `next-mdx-remote` 🌟         | `react-markdown` 🚀           |
-|-----------------------------------------|------------------------------|-----------------------------|
-| Supports raw Markdown                   | ✅ Yes                       | ✅ Yes                      |
-| Supports MDX (JSX in Markdown)          | ✅ Yes                       | ❌ No                       |
-| Supports Static Generation (SSG)        | ✅ Yes                       | ✅ Yes                      |
-| Supports Server-Side Rendering (SSR)    | ✅ Yes                       | ✅ Yes                      |
-| Custom components in Markdown           | ✅ Yes                       | ✅ Yes (via `components` prop) |
-| Requires front matter parsing           | ✅ Yes                       | ✅ Yes (manual parsing needed) |
-| Performance (lighter bundle)            | ✅ Yes (static output)       | ⚠️ Slightly heavier          |
-| Better for Blogs                        | ✅ Yes                       | ✅ Yes                      |
-| Better for Simple Markdown Rendering    | ⚠️ Overkill                  | ✅ Yes                      |
+| Feature                                 | `next-mdx-remote` 🌟         | `react-markdown` 🚀             |
+|-----------------------------------------|------------------------------|-------------------------------- |
+| Supports raw Markdown                   | ✅ Yes                       | ✅ Yes                          |
+| Supports MDX (JSX in Markdown)          | ✅ Yes                       | ❌ No                           |
+| Supports Static Generation (SSG)        | ✅ Yes                       | ✅ Yes                          |
+| Supports Server-Side Rendering (SSR)    | ✅ Yes                       | ✅ Yes                          |
+| Custom components in Markdown           | ✅ Yes                       | ✅ Yes (via `components` prop)  |
+| Requires front matter parsing           | ✅ Yes                       | ✅ Yes (manual parsing needed)  |
+| Performance (lighter bundle)            | ✅ Yes (static output)       | ⚠️ Slightly heavier             |
+| Better for Blogs                        | ✅ Yes                       | ✅ Yes                          |
+| Better for Simple Markdown Rendering    | ⚠️ Overkill                  | ✅ Yes                          |
+
+
+| Item       | Price |
+| :--------: | :---: |
+| Apple      |  $1   |
+| Banana     | $0.5  |
 
 **next-mdx-remote** won out for our project since we needed to embed React components inside our Markdown posts—something that plain Markdown simply can’t do.
 
