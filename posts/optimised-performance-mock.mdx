@@ -1,0 +1,21 @@
+export const title = "How We Optimized MDX Performance"
+export const date = "2025-02-08"
+export const author = "The unstable-blog Team"
+export const description = "Lessons from improving MDX load times in Next.js."
+export const tags = ["MDX", "Next.js", "Performance", "Optimization"]
+
+# How We Optimized MDX Performance
+
+MDX is powerful, but it can introduce **performance bottlenecks**. Here’s what we did to speed things up:
+
+## Key Optimizations
+
+1. **Static Generation (SSG)** instead of dynamic rendering.
+2. **Minimized plugin usage**—only `remark-gfm` and `remark-frontmatter`.
+3. **Lazy-loaded heavy components** inside MDX.
+
+## The Result?
+
+Our blog loads **50% faster** and our Core Web Vitals are happier. 🎉
+
+---

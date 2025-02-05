@@ -1,0 +1,23 @@
+export const title = "The Magic of mdx-components"
+export const date = "2025-02-06"
+export const author = "The unstable-blog Team"
+export const description = "Where to put your mdx-components file and why it matters."
+export const tags = ["MDX", "Next.js", "React Components", "Configuration"]
+
+# The Magic of mdx-components
+
+One of the biggest surprises we encountered was how important **mdx-components** placement is.
+
+## Where Not to Put It
+
+At first, we placed it in `app/components/`—big mistake. Then we tried `lib/`. Nope. Finally, we discovered…
+
+## The Correct Location
+
+Your `mdx-components` file should be **at the root** of your project. Otherwise, your custom React components won’t render properly inside your MDX files.
+
+## Lesson Learned
+
+Read the documentation carefully, but also experiment. Sometimes, the best way to learn is by breaking things first.
+
+---
