@@ -1,0 +1,10 @@
+# Hey there, curious bots!
+# We're happy to share our content – feel free to roam and index every nook and cranny.
+User-agent: *
+Disallow:
+
+# For those who love a good map, here's our sitemap:
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# P.S. If you stumble upon any bad puns, just know they're intentional.
+ 
