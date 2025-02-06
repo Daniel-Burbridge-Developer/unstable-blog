@@ -4,7 +4,7 @@ User-agent: *
 Disallow:
 
 # For those who love a good map, here's our sitemap:
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://unstable-blog.unstable-vault.com/site-map
 
 # P.S. If you stumble upon any bad puns, just know they're intentional.
  
