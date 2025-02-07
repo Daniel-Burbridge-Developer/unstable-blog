@@ -3,10 +3,7 @@ import { SignedIn, SignedOut, SignIn } from '@clerk/nextjs';
 const adminPage = () => {
   return (
     <div>
-      <SignedOut>
-        <SignIn />
-      </SignedOut>
-      <SignedIn>"Welcome User"</SignedIn>
+      <h1>Hello There</h1>
     </div>
   );
 };
