@@ -10,10 +10,10 @@ export default function Home() {
         <ul>
           <li>
             <Link
-              href="/blog/unstable-blog-test"
+              href="/admin"
               className="text-blue-500 visited:text-red-400 hover:underline"
             >
-              Unstable Blog
+              admin
             </Link>
           </li>
         </ul>
