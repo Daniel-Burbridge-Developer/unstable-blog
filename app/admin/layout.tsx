@@ -1,4 +1,4 @@
-import { SignedOut, SignedIn, SignIn } from '@clerk/nextjs';
+// import { SignedOut, SignedIn, SignInButton } from '@clerk/nextjs';
 
 export default function RootLayout({
   children,
@@ -6,11 +6,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex justify-center items-center min-h-svh">
-      <SignedOut>
-        <SignIn />
-      </SignedOut>
-      <SignedIn>{children}</SignedIn>
-    </div>
+    <div className="flex justify-center items-center min-h-svh">{children}</div>
   );
 }
