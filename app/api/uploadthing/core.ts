@@ -41,8 +41,8 @@ export const ourFileRouter = {
 
   textUploader: f({
     text: {
-      maxFileSize: '4MB',
-      maxFileCount: 1,
+      maxFileSize: '1MB',
+      maxFileCount: 10,
     },
   }) // Set permissions and file types for this FileRoute
     .middleware(async ({ req }) => {
