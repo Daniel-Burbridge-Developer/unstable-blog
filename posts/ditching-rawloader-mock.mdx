@@ -1,8 +1,9 @@
-export const title = "Why We Ditched raw-loader for MDX"
-export const date = "2025-02-05"
-export const author = "The unstable-blog Team"
-export const description = "Our journey discovering why raw-loader wasn’t the right choice for handling MDX content."
-export const tags = ["MDX", "Next.js", "raw-loader", "Webpack"]
+export const title = 'Why We Ditched raw-loader for MDX';
+export const date = '2025-02-05';
+export const author = 'The unstable-blog Team';
+export const description =
+  'Our journey discovering why raw-loader wasn’t the right choice for handling MDX content.';
+export const tags = ['MDX', 'Next.js', 'raw-loader', 'Webpack'];
 
 # Why We Ditched raw-loader for MDX
 
@@ -11,6 +12,7 @@ When we first started working with MDX, we thought using `raw-loader` would be t
 ## The Problem with raw-loader
 
 Using `raw-loader` seemed simple—until we realized:
+
 - It was **deprecated** in modern Webpack configurations.
 - It could introduce **security vulnerabilities** when not handled properly.
 - It wasn’t necessary when **next-mdx-remote** existed.
@@ -18,6 +20,7 @@ Using `raw-loader` seemed simple—until we realized:
 ## The Alternative: next-mdx-remote
 
 Switching to `next-mdx-remote` gave us:
+
 - Better **performance** with static generation.
 - A safer, more **maintainable** approach.
 - Full **MDX component support**.
