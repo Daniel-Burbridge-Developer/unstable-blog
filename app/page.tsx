@@ -16,6 +16,14 @@ export default function Home() {
               admin
             </Link>
           </li>
+          <li>
+            <Link
+              href="/example-uploader"
+              className="text-blue-500 visited:text-red-400 hover:underline"
+            >
+              uploader
+            </Link>
+          </li>
         </ul>
       </main>
     </div>

@@ -11,14 +11,14 @@ export default function Home() {
         onClientUploadComplete={(res) => {
           // Do something with the response
           console.log('Files: ', res);
-          alert('Upload Completed');
-          // toast('Event has been created', {
-          //   description: 'Sunday, December 03, 2023 at 9:00 AM',
-          //   action: {
-          //     label: 'Undo',
-          //     onClick: () => console.log('Undo'),
-          //   },
-          // });
+          // alert('Upload Completed');
+          toast('Filie Uploaded', {
+            description: 'Files have been uplaoded to upload thing',
+            action: {
+              label: 'complete',
+              onClick: () => console.log('complete'),
+            },
+          });
         }}
         onUploadError={(error: Error) => {
           // Do something with the error.
@@ -29,7 +29,7 @@ export default function Home() {
         className="bg-slate-500"
         onClick={() =>
           toast('Event has been created', {
-            description: 'Sunday, December 03, 2023 at 9:00 AM',
+            description: 'Sunday, December 31, 1995 at 9:00 AM',
             action: {
               label: 'Undo',
               onClick: () => console.log('Undo'),
