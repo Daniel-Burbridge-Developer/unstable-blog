@@ -6,17 +6,14 @@ const adminPage = async () => {
   const user = await currentUser();
 
   if (!userId) return redirectToSignIn();
+  if (
+    !(user?.publicMetadata.roles as string[]).some((role) => role === 'admin')
+  )
+    return 'Access Denied';
 
   return (
     <div>
-      <h1>Hello There</h1> <SignOutButton />
-      <h1>
-        {(user?.publicMetadata.roles as string[]).some(
-          (role) => role === 'admin'
-        )
-          ? 'Hello admin'
-          : null}
-      </h1>
+      <h1>Hello Admin</h1>
     </div>
   );
 };
