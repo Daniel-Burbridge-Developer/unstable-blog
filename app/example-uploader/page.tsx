@@ -1,12 +1,12 @@
 'use client';
 
 import { toast } from 'sonner';
-import { UploadButton } from '@/utils/uploadthing';
+import { UploadDropzone } from '@/utils/uploadthing';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen bg-slate-900 flex-col items-center justify-between p-24">
-      <UploadButton
+      <UploadDropzone
         endpoint="textUploader"
         onClientUploadComplete={(res) => {
           // Do something with the response
@@ -25,6 +25,7 @@ export default function Home() {
           alert(`ERROR! ${error.message}`);
         }}
       />
+
       <button
         className="bg-slate-500"
         onClick={() =>
