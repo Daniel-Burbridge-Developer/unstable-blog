@@ -1,12 +1,33 @@
 'use client';
 
 import { toast } from 'sonner';
-import { UploadDropzone } from '@/utils/uploadthing';
+import { UploadDropzone, UploadButton } from '@/utils/uploadthing';
 import { SignOutButton } from '@clerk/nextjs';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen bg-slate-900 flex-col items-center justify-between p-24">
+      <UploadButton
+        endpoint="textUploader"
+        onClientUploadComplete={(res) => {
+          // Do something with the response
+          console.log('Files: ', res);
+          // alert('Upload Completed');
+          toast('File Uploaded', {
+            description: 'Files have been uplaoded to upload thing',
+            action: {
+              label: 'complete',
+              onClick: () => console.log('complete'),
+            },
+          });
+        }}
+        onUploadError={(error: Error) => {
+          // Do something with the error.
+          alert(`ERROR! ${error.message}`);
+        }}
+      />
+
+      {/** THIS DOES NOT SEEM TO WORK */}
       <UploadDropzone
         endpoint="textUploader"
         onClientUploadComplete={(res) => {
