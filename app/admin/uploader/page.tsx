@@ -2,6 +2,7 @@
 
 import { toast } from 'sonner';
 import { UploadDropzone } from '@/utils/uploadthing';
+import { SignOutButton } from '@clerk/nextjs';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
           // Do something with the response
           console.log('Files: ', res);
           // alert('Upload Completed');
-          toast('Filie Uploaded', {
+          toast('File Uploaded', {
             description: 'Files have been uplaoded to upload thing',
             action: {
               label: 'complete',
@@ -40,6 +41,8 @@ export default function Home() {
       >
         Test Toast
       </button>
+
+      <SignOutButton />
     </main>
   );
 }
