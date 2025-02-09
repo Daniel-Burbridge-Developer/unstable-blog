@@ -24,6 +24,14 @@ export default function Home() {
               uploader
             </Link>
           </li>
+          <li>
+            <Link
+              href="/admin/downloader"
+              className="text-blue-500 visited:text-red-400 hover:underline"
+            >
+              downloader
+            </Link>
+          </li>
         </ul>
       </main>
     </div>
