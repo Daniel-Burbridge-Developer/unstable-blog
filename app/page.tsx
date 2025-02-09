@@ -18,7 +18,7 @@ export default function Home() {
           </li>
           <li>
             <Link
-              href="/example-uploader"
+              href="/admin/uploader"
               className="text-blue-500 visited:text-red-400 hover:underline"
             >
               uploader
