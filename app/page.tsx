@@ -10,26 +10,10 @@ export default function Home() {
         <ul>
           <li>
             <Link
-              href="/admin"
+              href="/blog"
               className="text-blue-500 visited:text-red-400 hover:underline"
             >
-              admin
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/admin/uploader"
-              className="text-blue-500 visited:text-red-400 hover:underline"
-            >
-              uploader
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/admin/downloader"
-              className="text-blue-500 visited:text-red-400 hover:underline"
-            >
-              downloader
+              blog
             </Link>
           </li>
         </ul>

@@ -6,11 +6,7 @@ export default async function Page({
   const slug = (await params).slug;
   const { default: Post, ...metadata } = await import(`@/posts/${slug}.mdx`);
 
-  return (
-    <article>
-      <Post />
-    </article>
-  );
+  return <Post />;
 }
 
 export function generateStaticParams() {
