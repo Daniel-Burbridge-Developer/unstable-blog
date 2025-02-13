@@ -1,21 +1,34 @@
+'use client';
+
 import Image from 'next/image';
 import placeholderImage from '@/posts/unstableplaceholder.webp';
+import { useRouter } from 'next/navigation';
 
 const PostCard = ({
   title,
   date,
   author,
   description,
+  slug,
   tags,
 }: {
   title: string;
   date: string;
   author: string;
   description: string;
+  slug: string;
   tags: string[];
 }) => {
+  const router = useRouter();
+
+  const navigateToBlog = () => {
+    router.push(`/blog/${slug}`);
+  };
   return (
-    <div className="flex w-full h-full my-4 border border-gray-500 hover:border-yellow-500 rounded-lg p-4 bg-gray-900 shadow-md">
+    <div
+      className="flex w-full h-full my-4 border border-gray-500 hover:border-yellow-500 rounded-lg p-4 bg-gray-900 shadow-md cursor-pointer"
+      onClick={() => navigateToBlog()}
+    >
       {/* Left Side: Fixed Image */}
       <div className="w-36 h-36 relative flex-shrink-0">
         <Image

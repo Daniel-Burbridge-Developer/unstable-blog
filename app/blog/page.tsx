@@ -8,7 +8,7 @@ const Blog = async () => {
       {posts.map((post) => (
         <div key={post?.slug} className="w-full max-w-[600px] h-[180px] flex">
           {post && post.metadata ? (
-            <PostCard {...post.metadata} />
+            <PostCard slug={post.slug} {...post.metadata} />
           ) : (
             'unable to locate card'
           )}
