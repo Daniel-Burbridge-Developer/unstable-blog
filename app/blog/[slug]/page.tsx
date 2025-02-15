@@ -1,27 +1,33 @@
 import type { Metadata } from 'next';
 import RelatedArticles from './related-articles-section';
 
+// Update the type: params is now a Promise of an object with slug
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-// Ensure generateMetadata correctly types its params
+// Update generateMetadata to await the params promise
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const resolvedParams = await params;
   return {
-    title: params.slug.replace(/-/g, ' '),
-    description: `Read about ${params.slug.replace(/-/g, ' ')} on Unstable Blog.`,
+    title: resolvedParams.slug.replace(/-/g, ' '),
+    description: `Read about ${resolvedParams.slug.replace(/-/g, ' ')} on Unstable Blog.`,
   };
 }
 
-// Page Component (Now an async function but with explicitly defined props)
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-
+// Update the page component similarly
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   try {
     const { default: Post, ...metadata } = await import(`@/posts/${slug}.mdx`);
-
     return (
       <div>
         <Post />
@@ -37,7 +43,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
 }
 
-// Generates static paths for the blog
 export function generateStaticParams() {
   return [
     { slug: 'unstable-blog-mock' },
