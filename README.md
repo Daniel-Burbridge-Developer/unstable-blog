@@ -141,7 +141,7 @@ This project is licensed under the MIT License.
 - [x] Prettify Theming
 - [x] Make the Markdown look nice
 - [x] Think of a theme'd "character" to represent the theme Unstable
-- [ ] Dynamically import images
+- [x] Dynamically import images
 - [ ] Page around the Post, Related Articles, footer with FAQ / TOS / etc
 - [ ] Subscribe when update..... This one's gonna be hard
 - [ ] Make new list, learn things like sitemaps, robots.txts, etc..
