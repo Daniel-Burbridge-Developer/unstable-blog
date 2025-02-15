@@ -100,7 +100,7 @@ This project is a static blog built with Next.js. It leverages Markdown for cont
 ### Deployment
 
 - [x] Deploy the project on Vercel.
-- [ ] Verify that static generation works as expected in production.
+- [x] Verify that static generation works as expected in production.
 
 ## Stretch Goals
 
