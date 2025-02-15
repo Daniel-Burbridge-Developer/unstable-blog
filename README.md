@@ -130,3 +130,20 @@ Contributions, issues, and feature requests are welcome! Please feel free to ope
 ## License
 
 This project is licensed under the MIT License.
+
+# TODO TODAY:
+
+- [x] Better responsive design
+  - [x] Whitespace shrinkage, not uniform shrinkage
+  - [x] Remove description once small enough
+  - [x] Picture on top, Title / meta data below once mobile-sized
+- [x] Add Title
+- [x] Prettify Theming
+- [x] Make the Markdown look nice
+- [x] Think of a theme'd "character" to represent the theme Unstable
+- [ ] Dynamically import images
+- [ ] Page around the Post, Related Articles, footer with FAQ / TOS / etc
+- [ ] Subscribe when update..... This one's gonna be hard
+- [ ] Make new list, learn things like sitemaps, robots.txts, etc..
+
+- [ ] Write my first blog post, maybe multiple, outlining process, goals and challenges.

@@ -4,7 +4,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
-  const { default: Post, ...metadata } = await import(`@/posts/${slug}.mdx`);
+  const { default: Post } = await import(`@/posts/${slug}.mdx`);
 
   return <Post />;
 }
