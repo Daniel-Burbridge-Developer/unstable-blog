@@ -1,4 +1,4 @@
-import { getPostData, getRelatedPosts } from '../getPosts';
+import { getRelatedPosts } from '../getPosts';
 import PostCard from '../post-card';
 
 const RelatedArticles = async ({
@@ -22,13 +22,12 @@ const RelatedArticles = async ({
   }
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen py-8 bg-gray-900">
+    <main className="flex flex-col items-center justify-center min-h-screen py-8 bg-transparent-900">
       <header className="w-full bg-gray-800 py-8 mb-12">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl font-bold text-white px-6 py-3 inline-block bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-lg">
             Related Posts
           </h1>
-          <h2>{tags.map((tag) => tag + '')}</h2>
         </div>
       </header>
 

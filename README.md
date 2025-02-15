@@ -1,6 +1,6 @@
 # Unstable-Blog
 
-A beginner-level blog built with Next.js, Markdown, and Tailwind CSS that serves as a platform to learn web development. This project uses Markdown files (with YAML frontmatter) as the source for blog posts, supports dynamic routing, and features a search bar to filter posts.
+A beginner-level blog built with Next.js, Markdown, and Tailwind CSS that serves as a platform to learn web development. This project uses Markdown files (Specially formatted as MDX) as the source for blog posts, supports dynamic routing, and navigates to similar posts via a tag system.
 
 ## Table of Contents
 
@@ -16,22 +16,16 @@ A beginner-level blog built with Next.js, Markdown, and Tailwind CSS that serves
 
 ## Overview
 
-This project is a static blog built with Next.js. It leverages Markdown for content creation so that you can focus on writing while the application handles routing, styling, and search functionality. As you progress, you'll add a search bar and other advanced features to make the blog even more dynamic.
+This project is a static blog built with Next.js. It leverages Markdown for content creation so that you can focus on writing while the application handles routing, styling, and other functionality.
 
 ## Features
 
 - **Static Generation & Dynamic Routing:**
   Renders blog posts written in Markdown with YAML frontmatter. Each post gets its own dynamic route.
 - **Markdown Rendering:**
-  Uses `gray-matter` to parse Markdown files and `react-markdown` to render content as HTML.
+  Uses `MDX` to render content as HTML.
 - **Tailwind CSS Styling:**
   Easily customize your layout and UI with a utility-first CSS framework.
-- **Search Functionality:**
-  A client‑side search bar that updates the URL with a query parameter and filters posts.
-- **SEO Optimized:**
-  Pages include meta tags and clean URLs.
-- **(Optional) Fuzzy Search:**
-  You can extend the search using Fuse.js for more flexible matching.
 
 ## Installation
 
@@ -45,13 +39,13 @@ This project is a static blog built with Next.js. It leverages Markdown for cont
 2. **Install Dependencies:**
 
    ```bash
-   npm install
+   pnpm update
    ```
 
 3. **Run the Development Server:**
 
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 4. **Open in Browser:**
@@ -61,11 +55,9 @@ This project is a static blog built with Next.js. It leverages Markdown for cont
 ## Usage
 
 - **Adding Posts:**
-  Create Markdown files (e.g., `first-post.md`, `second-post.md`) in the `posts/` folder. Each file should include YAML frontmatter for metadata such as title and date.
-- **Search:**
-  Use the search bar on the homepage. Typing a query and pressing Enter updates the URL (e.g., `/?q=react`) and filters the post list accordingly.
+  Create Markdown files (e.g., `first-post.md`, `second-post.md`) in the `posts/` folder. Include a relavent picture.
 - **Customization:**
-  Modify components under `components/` and styling in `styles/` to personalize the look and functionality.
+  Modify component `mdx-components.tsx` and files under `@/app/blog/`, to personalize the look and functionality.
 
 ## Development Checklist
 
@@ -89,28 +81,26 @@ This project is a static blog built with Next.js. It leverages Markdown for cont
 - [x] Create dynamic route for blog posts (`pages/blog/[slug].js`).
 - [x] Implement `getStaticParams` to statically generate pages.
 
-### Search Functionality
+### Similar-To Functionality
 
-- [ ] **Basic Client‑Side Filtering:**
-  - [ ] Create a `SearchBar` component that updates the URL query using `useRouter`.
-  - [ ] Update the homepage to read the query (using `useSearchParams`) and filter posts.
-- [ ] **(Optional) Fuzzy Search:**
-  - [ ] Integrate Fuse.js for improved search matching.
+- **Basic Client‑Side Filtering:**
+  - [x] Filter Based on Tags at the bottom of each post, to find similar posts.
+  - [x] Display in most similar to least similar format.
 
 ### Styling & Layout
 
-- [ ] Build a consistent layout with header and footer components.
-- [ ] Ensure responsive design using Tailwind CSS.
+- [x] Build a consistent layout with header and footer components.
+- [x] Ensure responsive design using Tailwind CSS.
 
 ### SEO & Metadata
 
-- [ ] Add meta tags using Next.js’s `<Head>` component or Metadata API.
-- [ ] Optimize URLs and add descriptions.
+- [x] Add metadata using Next.js’s `<Head>` component or Metadata API.
+- [x] Optimize URLs and add descriptions.
 
 ### Deployment
 
-- [ ] Deploy the project on Vercel.
-- [ ] Verify that static generation and search work as expected in production.
+- [x] Deploy the project on Vercel.
+- [ ] Verify that static generation works as expected in production.
 
 ## Stretch Goals
 
@@ -122,28 +112,9 @@ This project is a static blog built with Next.js. It leverages Markdown for cont
 - [ ] Set up a headless CMS (e.g., TinaCMS) for content management.
 - [ ] Add unit and integration tests.
 - [ ] Enable Incremental Static Regeneration (ISR) for automatic updates.
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome! Please feel free to open an issue or submit a pull request if you have ideas or improvements.
+- [ ] Set up subscription service
+- [ ] Ensure SEO optimisation
 
 ## License
 
 This project is licensed under the MIT License.
-
-# TODO TODAY:
-
-- [x] Better responsive design
-  - [x] Whitespace shrinkage, not uniform shrinkage
-  - [x] Remove description once small enough
-  - [x] Picture on top, Title / meta data below once mobile-sized
-- [x] Add Title
-- [x] Prettify Theming
-- [x] Make the Markdown look nice
-- [x] Think of a theme'd "character" to represent the theme Unstable
-- [x] Dynamically import images
-- [ ] Page around the Post, Related Articles, footer with FAQ / TOS / etc
-- [ ] Subscribe when update..... This one's gonna be hard
-- [ ] Make new list, learn things like sitemaps, robots.txts, etc..
-
-- [ ] Write my first blog post, maybe multiple, outlining process, goals and challenges.
