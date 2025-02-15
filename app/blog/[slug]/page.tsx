@@ -39,15 +39,7 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  return [
-    { slug: 'unstable-blog-mock' },
-    { slug: 'design-mock' },
-    { slug: 'ditching-rawloader-mock' },
-    { slug: 'debugging-mdx-mock' },
-    { slug: 'magic-mdx-mock' },
-    { slug: 'optimised-performance-mock' },
-    { slug: 'static-generation-mock' },
-  ];
+  return [{ slug: 'unstable-blog' }];
 }
 
 // Disable dynamic params for purely static generation
