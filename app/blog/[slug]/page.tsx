@@ -1,11 +1,6 @@
 import type { Metadata } from 'next';
 import RelatedArticles from './related-articles-section';
 
-// Update the type: params is now a Promise of an object with slug
-interface PageProps {
-  params: Promise<{ slug: string }>;
-}
-
 // Update generateMetadata to await the params promise
 export async function generateMetadata({
   params,
