@@ -5,19 +5,18 @@ interface PageProps {
   params: { slug: string };
 }
 
-// Generate metadata dynamically based on the slug
+// Ensure generateMetadata correctly types its params
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { slug } = params;
   return {
-    title: slug.replace(/-/g, ' '), // Format title for better readability
-    description: `Read about ${slug.replace(/-/g, ' ')} on Unstable Blog.`,
+    title: params.slug.replace(/-/g, ' '),
+    description: `Read about ${params.slug.replace(/-/g, ' ')} on Unstable Blog.`,
   };
 }
 
-// Page Component
-export default async function Page({ params }: PageProps) {
+// Page Component (Now an async function but with explicitly defined props)
+export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   try {
@@ -38,9 +37,9 @@ export default async function Page({ params }: PageProps) {
   }
 }
 
-// Generate static paths for the blog
+// Generates static paths for the blog
 export function generateStaticParams() {
-  const params = [
+  return [
     { slug: 'unstable-blog-mock' },
     { slug: 'design-mock' },
     { slug: 'ditching-rawloader-mock' },
@@ -49,10 +48,7 @@ export function generateStaticParams() {
     { slug: 'optimised-performance-mock' },
     { slug: 'static-generation-mock' },
   ];
-
-  console.log('Generating static params:', params);
-  return params;
 }
 
-// Disable dynamic params to only allow pre-generated pages
+// Disable dynamic params for purely static generation
 export const dynamicParams = false;
