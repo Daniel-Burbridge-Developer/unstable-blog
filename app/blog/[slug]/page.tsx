@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RelatedArticles from './related-articles-section';
+import BlogImageHeader from './header';
 
 // Update generateMetadata to await the params promise
 export async function generateMetadata({
@@ -25,6 +26,7 @@ export default async function Page({
     const { default: Post, ...metadata } = await import(`@/posts/${slug}.mdx`);
     return (
       <div>
+        <BlogImageHeader image={metadata.image} title={metadata.title} />
         <Post />
         <RelatedArticles
           tags={metadata.tags || []}

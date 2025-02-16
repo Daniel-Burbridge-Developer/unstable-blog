@@ -10,10 +10,10 @@ interface PostCardProps {
   description: string;
   slug: string;
   tags: string[];
-  image?: StaticImageData | string;
+  image?: string | StaticImageData;
 }
 
-const PostCard = ({
+const PostCard = async ({
   title,
   date,
   author,
