@@ -15,7 +15,6 @@ const RelatedArticles = async ({
       <main className="flex flex-col items-center justify-center min-h-screen py-8 bg-gray-900">
         <div className="container mx-auto text-center text-white">
           <p>No related articles found.</p>
-          {/* You can add a message here or render nothing */}
         </div>
       </main>
     );
